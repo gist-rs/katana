@@ -28,9 +28,10 @@ struct Kana {
     katakana: String,
 }
 
-#[derive(PartialEq, Props, Clone, Copy)]
+#[derive(PartialEq, Props, Clone)]
 struct KanaSwitcherProps {
     kana_type: KanaType,
+    kana_hashmap_signal: Signal<HashMap<String, Kana>>,
 }
 
 fn get_kana_display_name(current_type: &KanaType, kana_type: &KanaType) -> String {
@@ -45,16 +46,6 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
     // context -------------------------------------------
 
     let mut config_signal = consume_context::<Signal<AppConfig>>();
-
-    // model -------------------------------------------
-
-    let future = use_resource(|| async move {
-        reqwest::get("http://localhost:8081/kana.json")
-            .await
-            .unwrap()
-            .json::<Vec<Kana>>()
-            .await
-    });
 
     // css -------------------------------------------
 
@@ -95,52 +86,17 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
 
     // state -------------------------------------------
 
-    let mut kana_hashmap_signal = use_signal(HashMap::<String, Kana>::new);
+    // let mut kana_hashmap_signal = use_signal(HashMap::<String, Kana>::new);
     let mut kana_focus_state = use_signal(|| "-".to_string());
 
     // render -------------------------------------------
 
     let current_type = &props.kana_type;
-    let kana_hashmap = kana_hashmap_signal();
+    let kana_hashmap = props.kana_hashmap_signal.read();
 
     rsx! {
         if kana_hashmap.is_empty() {
-            match future.read_unchecked().as_ref() {
-                Some(Ok(response)) => {
-                    let mut kana_hashmap: HashMap<String, Kana> = HashMap::new();
-                    response.iter().for_each(|kana: &Kana| {
-                        let key = match kana.romaji.as_str() {
-                            "shi" => "si".to_owned(),
-                            "chi" => "ti".to_owned(),
-                            "tsu" => "tu".to_owned(),
-                            "sha" => "sya".to_owned(),
-                            "shu" => "syu".to_owned(),
-                            "sho" => "syo".to_owned(),
-                            "cha" => "tya".to_owned(),
-                            "chu" => "tyu".to_owned(),
-                            "cho" => "tyo".to_owned(),
-                            "n" => "Nu".to_owned(),
-                            "ja" => "zya".to_owned(),
-                            "ji" => "zi".to_owned(),
-                            "ju" => "zyu".to_owned(),
-                            "jo" => "zyo".to_owned(),
-                            "ji (dji)" => "di".to_owned(),
-                            "zu (dzu)" => "du".to_owned(),
-                            "ja (dja)" => "dya".to_owned(),
-                            "ju (dju)" => "dyu".to_owned(),
-                            "jo (djo)" => "dyo".to_owned(),
-                            romaji => romaji.to_owned(),
-                        };
-                        kana_hashmap.insert(key, Kana { ..kana.clone() });
-                    });
-            
-                    kana_hashmap_signal.set(kana_hashmap);
-            
-                    rsx! { div { "ok" } }
-                }
-                Some(Err(error)) => rsx! { div { "Loading failed: {error}" } },
-                None => rsx! { div { "Loading..." } },
-            }
+            div { "loading..." }
         }
 
         div {
@@ -224,10 +180,57 @@ impl Default for AppConfig {
 
 fn App() -> Element {
     use_context_provider(|| Signal::new(AppConfig::default()));
+
     let config_signal = consume_context::<Signal<AppConfig>>();
+    let mut kana_hashmap_signal = use_signal(HashMap::<String, Kana>::new);
+
+    // model -------------------------------------------
+
+    let future = use_resource(|| async move {
+        reqwest::get("http://localhost:8081/kana.json")
+            .await
+            .unwrap()
+            .json::<Vec<Kana>>()
+            .await
+    });
+
+    match future.read_unchecked().as_ref() {
+        Some(Ok(response)) => {
+            let mut kana_hashmap: HashMap<String, Kana> = HashMap::new();
+            response.iter().for_each(|kana: &Kana| {
+                let key = match kana.romaji.as_str() {
+                    "shi" => "si".to_owned(),
+                    "chi" => "ti".to_owned(),
+                    "tsu" => "tu".to_owned(),
+                    "sha" => "sya".to_owned(),
+                    "shu" => "syu".to_owned(),
+                    "sho" => "syo".to_owned(),
+                    "cha" => "tya".to_owned(),
+                    "chu" => "tyu".to_owned(),
+                    "cho" => "tyo".to_owned(),
+                    "n" => "Nu".to_owned(),
+                    "ja" => "zya".to_owned(),
+                    "ji" => "zi".to_owned(),
+                    "ju" => "zyu".to_owned(),
+                    "jo" => "zyo".to_owned(),
+                    "ji (dji)" => "di".to_owned(),
+                    "zu (dzu)" => "du".to_owned(),
+                    "ja (dja)" => "dya".to_owned(),
+                    "ju (dju)" => "dyu".to_owned(),
+                    "jo (djo)" => "dyo".to_owned(),
+                    romaji => romaji.to_owned(),
+                };
+                kana_hashmap.insert(key, Kana { ..kana.clone() });
+            });
+
+            kana_hashmap_signal.set(kana_hashmap);
+        }
+        Some(Err(error)) => log::error!("Loading failed: {error}"),
+        None => log::error!("None..."),
+    }
 
     log::info!("{:#?}", config_signal);
-    rsx! { KanaSwitcher { kana_type: config_signal().kana_type } }
+    rsx! { KanaSwitcher { kana_type: config_signal().kana_type, kana_hashmap_signal } }
 }
 
 fn main() {
