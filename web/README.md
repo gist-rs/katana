@@ -4,5 +4,5 @@
 
 ```
 cargo install dioxus-cli
-dx serve
+dx serve --port=8081
 ```
