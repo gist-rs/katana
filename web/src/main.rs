@@ -28,7 +28,7 @@ struct Kana {
     katakana: String,
 }
 
-#[derive(PartialEq, Props, Clone)]
+#[derive(PartialEq, Props, Clone, Copy)]
 struct KanaSwitcherProps {
     kana_type: KanaType,
     kana_hashmap_signal: Signal<HashMap<String, Kana>>,
@@ -137,9 +137,10 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                     match maybe_kana {
                                         Some(kana) => rsx!{
                                             div {
-                                                // onclick: move |_| {
-                                                //     kana_focus_state.set(kana.romaji.clone());
-                                                // },
+                                                onclick: {
+                                                    let romaji = kana.romaji.clone();
+                                                    move |_| {kana_focus_state.set(romaji.to_string());}
+                                                },
                                                 style: "{text_style}",
                                                 {
                                                     match current_type {
