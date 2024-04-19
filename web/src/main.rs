@@ -53,7 +53,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         display: inline-block;
         white-space: nowrap;
         width: 3em;
-        line-height: 2em;
+        line-height: 3em;
         text-align: center;
     "#;
 
