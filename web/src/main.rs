@@ -51,10 +51,9 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
 
     let header_top_style = r#"
         display: inline-block;
-        padding: 0.1em;
         white-space: nowrap;
-        width: 2.3em;
-        line-height: 2.3em;
+        width: 3em;
+        line-height: 2em;
         text-align: center;
     "#;
 
@@ -64,24 +63,25 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         display: flex;
         gap: 10px;
         row-gap: 10px;
-        width: 480px;
+        width: 560px;
         flex-wrap: wrap;
     "#;
 
     let text_style = r#"
         background-color: #eeeeee;
         display: inline-block;
-        padding: 0.1em;
         white-space: nowrap;
-        width: 2.3em;
-        height: 2.3em;
+        width: 3em;
+        height: 3em;
         text-align: center;
+        line-height: 2em;
     "#;
 
     let text_romaji_style = r#"
         display: block;
-        font-size: x-small;
+        font-size: small;
         color: #aaaaaa;
+        line-height: 0.5em;
     "#;
 
     // state -------------------------------------------
@@ -139,17 +139,17 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                             div {
                                                 onclick: {
                                                     let romaji = kana.romaji.clone();
-                                                    move |_| {kana_focus_signal.set(romaji.to_string());}
+                                                    move |_| { kana_focus_signal.set(romaji.to_string()); }
                                                 },
                                                 style: "{text_style}",
                                                 {
                                                     match current_type {
-                                                        KanaType::Hiragana=>rsx! { "{kana.hiragana}"},
-                                                        KanaType::Katakana=>rsx! { "{kana.katakana}"},
+                                                        KanaType::Hiragana=>rsx! { "{kana.hiragana}" },
+                                                        KanaType::Katakana=>rsx! { "{kana.katakana}" },
                                                     }
                                                 },
                                                 br {},
-                                                small { style: "{text_romaji_style}", "{kana.romaji}"},
+                                                small { style: "{text_romaji_style}", "{kana.romaji}" },
                                             }
                                         },
                                         None=> rsx!{
