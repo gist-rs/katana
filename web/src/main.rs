@@ -87,7 +87,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
     // state -------------------------------------------
 
     // let mut kana_hashmap_signal = use_signal(HashMap::<String, Kana>::new);
-    let mut kana_focus_state = use_signal(|| "-".to_string());
+    let mut kana_focus_signal = use_signal(|| "-".to_string());
 
     // render -------------------------------------------
 
@@ -139,7 +139,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                             div {
                                                 onclick: {
                                                     let romaji = kana.romaji.clone();
-                                                    move |_| {kana_focus_state.set(romaji.to_string());}
+                                                    move |_| {kana_focus_signal.set(romaji.to_string());}
                                                 },
                                                 style: "{text_style}",
                                                 {
