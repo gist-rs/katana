@@ -59,22 +59,40 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
 
     let header_left_style = &header_top_style;
 
-    let container_style = r#"
-        display: flex;
-        gap: 10px;
-        row-gap: 10px;
-        width: 560px;
-        flex-wrap: wrap;
-    "#;
+    let container_style = format!(
+        r#"
+            display: flex;
+            gap: 10px;
+            row-gap: 10px;
+            flex-wrap: wrap;
+            width: 540px;
+            width: {}px
+        "#,
+        48 * 11
+    );
 
     let text_style = r#"
+        transition: all .3s;
         background-color: #eeeeee;
         display: inline-block;
         white-space: nowrap;
-        width: 3em;
-        height: 3em;
+        width: 48px;
+        height: 48px;
         text-align: center;
         line-height: 2em;
+        cursor: pointer;
+    "#;
+
+    let text_style_focus = r#"
+        transition: all .3s;
+        display: inline-block;
+        background-color: #eeffee;
+        white-space: nowrap;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 2em;
+        cursor: pointer;
     "#;
 
     let text_romaji_style = r#"
@@ -82,6 +100,24 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         font-size: small;
         color: #aaaaaa;
         line-height: 0.5em;
+    "#;
+
+    let text_expand_style = r#"
+        transition: all .3s;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        line-height: 1em;
+        font-size: 8em;
+        background-color: #eeffee;
+    "#;
+
+    let text_expand_romaji_style = r#"
+        display: block;
+        font-size: medium;
+        color: #aaaaaa;
+        line-height: 4em;
     "#;
 
     // state -------------------------------------------
@@ -121,7 +157,6 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         }
         div { style: "{container_style}",
             {
-            
                 ["", "k", "s", "t", "n", "h", "m", "y", "r", "w", "N", "g" , "z", "d", "b", "p"].iter().enumerate().map(|(j,f)| rsx! {
                     {
                         ["", "a", "i", "u", "e", "o", "ya", "yu", "yo"].iter().enumerate().map(|(i, e)| rsx! {
@@ -133,15 +168,22 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                 {
                                     let kana_key = format!("{f}{e}");
                                     let maybe_kana = kana_hashmap.get(&kana_key);
+                                    let kana_style = if kana_focus_signal() != kana_key { text_style } else { text_style_focus };
             
                                     match maybe_kana {
                                         Some(kana) => rsx!{
                                             div {
                                                 onclick: {
-                                                    let romaji = kana.romaji.clone();
-                                                    move |_| { kana_focus_signal.set(romaji.to_string()); }
+                                                    move |_| {
+                                                        let current_kana_key = kana_focus_signal();
+                                                        if current_kana_key != kana_key {
+                                                            kana_focus_signal.set(kana_key.to_owned());
+                                                        } else {
+                                                            kana_focus_signal.set("-".to_owned());
+                                                        }
+                                                    }
                                                 },
-                                                style: "{text_style}",
+                                                style: "{kana_style}",
                                                 {
                                                     match current_type {
                                                         KanaType::Hiragana=>rsx! { "{kana.hiragana}" },
@@ -159,6 +201,43 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                 }
                             }
                         })
+                    },
+            
+                    {
+                        rsx! {
+                            if j > 0 {
+            
+                                {
+                                    rsx! {
+                                        if kana_focus_signal().starts_with(f) {
+                                            {
+                                                let kana_key = kana_focus_signal();
+                                                let maybe_kana = kana_hashmap.get(&kana_key);
+            
+                                                match maybe_kana {
+                                                    Some(kana) => rsx! {
+                                                        div {
+                                                            style: "{text_expand_style}",
+                                                            {
+                                                                match current_type {
+                                                                    KanaType::Hiragana=>rsx! { "{kana.hiragana}" },
+                                                                    KanaType::Katakana=>rsx! { "{kana.katakana}" },
+                                                                }
+                                                            },
+                                                            br {},
+                                                            small { style: "{text_expand_romaji_style}", "{kana.romaji}" },
+                                                        }
+                                                    },
+                                                    None=> rsx! {
+                                                        div { style: "{text_style}", "" }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 })
             }
