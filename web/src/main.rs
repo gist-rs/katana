@@ -108,7 +108,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         width: 100%;
         height: auto;
         text-align: center;
-        line-height: 1em;
+        line-height: 1.1em;
         font-size: 8em;
         background-color: #eeffee;
     "#;
@@ -117,7 +117,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         display: block;
         font-size: medium;
         color: #aaaaaa;
-        line-height: 4em;
+        line-height: 2em;
     "#;
 
     // state -------------------------------------------
