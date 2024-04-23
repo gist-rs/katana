@@ -7,6 +7,11 @@ use dioxus::prelude::*;
 use serde::{Deserialize, Serialize};
 use strum::{Display, EnumString};
 
+mod card;
+use card::KanaCardComponent;
+
+use crate::card::KanaCardComponentProps;
+
 pub fn TableSwitcher() -> Element {
     rsx! { div { style: "display: flex-grid" } }
 }
@@ -100,24 +105,6 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         font-size: small;
         color: #aaaaaa;
         line-height: 0.5em;
-    "#;
-
-    let text_expand_style = r#"
-        transition: all .3s;
-        display: block;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        line-height: 1.1em;
-        font-size: 8em;
-        background-color: #eeffee;
-    "#;
-
-    let text_expand_romaji_style = r#"
-        display: block;
-        font-size: medium;
-        color: #aaaaaa;
-        line-height: 2em;
     "#;
 
     // state -------------------------------------------
@@ -214,24 +201,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                                 let kana_key = kana_focus_signal();
                                                 let maybe_kana = kana_hashmap.get(&kana_key);
             
-                                                match maybe_kana {
-                                                    Some(kana) => rsx! {
-                                                        div {
-                                                            style: "{text_expand_style}",
-                                                            {
-                                                                match current_type {
-                                                                    KanaType::Hiragana=>rsx! { "{kana.hiragana}" },
-                                                                    KanaType::Katakana=>rsx! { "{kana.katakana}" },
-                                                                }
-                                                            },
-                                                            br {},
-                                                            small { style: "{text_expand_romaji_style}", "{kana.romaji}" },
-                                                        }
-                                                    },
-                                                    None=> rsx! {
-                                                        div { style: "{text_style}", "" }
-                                                    }
-                                                }
+                                                KanaCardComponent(KanaCardComponentProps{current_type, maybe_kana})
                                             }
                                         }
                                     }
