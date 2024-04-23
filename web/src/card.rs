@@ -49,6 +49,7 @@ pub struct KanaCardComponentProps<'a> {
 
 pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
     let current_type = props.current_type;
+    let kana_key = props.kana_key;
     let kana = props.kana;
 
     let card_style: &str = r#"
@@ -85,17 +86,14 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
 
     log::info!("{kana:?}");
 
-    // let kana_key = kana_key.as_str();
-    let future = use_resource(|| async move {
-        log::info!("reqwest.....");
-        // reqwest::get(format!("http://localhost:8081/{kana_key}.json"))
-        reqwest::get(format!("http://localhost:8081/ka.json"))
-            // reqwest::get("http://localhost:8081/kana.json")
+    let kana_key = kana_key.clone();
+    let future = use_resource(use_reactive!(|(kana_key,)| async move {
+        reqwest::get(format!("http://localhost:8081/{kana_key}.json"))
             .await
             .unwrap()
             .json::<Vec<KanaCard>>()
             .await
-    });
+    }));
 
     match future.read_unchecked().as_ref() {
         Some(Ok(response)) => {
