@@ -3,6 +3,14 @@
     "kanji": "刀",
     "hiragana": "かたな",
     "english": "katana",
+    "phonemic": "/kəˈtänə/",
     "src": "katana.png"
+  },
+  {
+    "kanji": "咖哩",
+    "katakana": "カレー",
+    "english": "curry",
+    "phonemic": "karē",
+    "src": "curry_rice.png"
   }
 ]

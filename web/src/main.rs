@@ -201,7 +201,14 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                                 let kana_key = kana_focus_signal();
                                                 let maybe_kana = kana_hashmap.get(&kana_key);
             
-                                                KanaCardComponent(KanaCardComponentProps{current_type, maybe_kana})
+                                                match maybe_kana {
+                                                    Some(kana) =>  {
+                                                        KanaCardComponent(KanaCardComponentProps{current_type, kana_key, kana:kana.clone()})
+                                                    },
+                                                    None=> rsx! {
+                                                        div { style: "{text_style}", "" }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
