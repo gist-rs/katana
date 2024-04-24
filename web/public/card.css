@@ -43,6 +43,15 @@
   max-height: 64px;
 }
 
+.card-detail {
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.card-meaning {
+  color: #aaaaaa;
+}
+
 .card-right-nav {
   display: flex;
   align-items: center;

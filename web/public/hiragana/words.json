@@ -1,23 +1,44 @@
 [
   {
-    "kanji": "刀",
     "kana": "かたな",
-    "english": "katana",
-    "phonemic": "/kəˈtänə/",
+    "romaji": "katana",
+    "kanji": "刀",
+    "meaning": "Japanese sword",
     "src": "hiragana/katana.png"
   },
   {
-    "kanji": "木",
     "kana": "き",
-    "english": "ki",
-    "phonemic": "ki",
+    "romaji": "ki",
+    "kanji": "木",
+    "meaning": "Tree",
     "src": "hiragana/tree.png"
   },
   {
-    "kanji": "お好み焼き",
     "kana": "おこのみやき",
-    "english": "okonomiyaki",
-    "phonemic": "okonomiyaki",
+    "romaji": "okonomiyaki",
+    "kanji": "お好み焼き",
+    "meaning": "Japanese pizza",
     "src": "hiragana/okonomiyaki.png"
+  },
+  {
+    "kana": "く",
+    "romaji": "ku",
+    "kanji": "句",
+    "meaning": "Sentence",
+    "src": "hiragana/sentence.png"
+  },
+  {
+    "kana": "くるま",
+    "romaji": "kuruma",
+    "kanji": "車",
+    "meaning": "Car",
+    "src": "hiragana/car.png"
+  },
+  {
+    "kana": "おきゃくさま",
+    "romaji": "okyakusama",
+    "kanji": "お客さま",
+    "meaning": "Customer",
+    "src": "hiragana/customer.png"
   }
 ]

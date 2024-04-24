@@ -1,6 +1,3 @@
-use std::clone;
-
-use anyhow::bail;
 use dioxus::prelude::*;
 use serde::{Deserialize, Serialize};
 
@@ -9,34 +6,11 @@ use crate::{Kana, KanaType};
 #[derive(Serialize, Deserialize, Debug, PartialEq, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct KanaCard {
-    english: String,
+    romaji: String,
+    meaning: String,
     kana: String,
     kanji: String,
     src: String,
-}
-
-impl KanaCard {
-    fn default() -> Self {
-        KanaCard {
-            english: "n/a".to_owned(),
-            kana: "n/a".to_owned(),
-            kanji: "n/a".to_owned(),
-            src: "n/a".to_owned(),
-        }
-    }
-}
-
-pub async fn get_kana_card_data(kana_key: String) -> anyhow::Result<Vec<KanaCard>> {
-    // Get metadata
-    match reqwest::get(format!("http://localhost:8081/{kana_key}.json"))
-        .await
-        .unwrap()
-        .json::<Vec<KanaCard>>()
-        .await
-    {
-        Ok(response) => Ok(response),
-        Err(error) => bail!("Failed to load:{}, Error: {error}", kana_key),
-    }
 }
 
 pub struct KanaCardComponentProps<'a> {
@@ -105,17 +79,20 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                             let kana = kana_card.kana.clone();
                         
                             rsx! {
-                                div {
-                                    class: "card-right-item",
+                                div { class: "card-right-item",
                                     img {
                                         src: "{kana_card.src}"
                                     }
-                                    div {
+                                    div { class: "card-detail",
                                         div {
                                             "{kana}"
                                         }
                                         div {
-                                            "{kana_card.english}"
+                                            "{kana_card.romaji}"
+                                        }
+                                        div {
+                                            class: "card-meaning",
+                                            "{kana_card.meaning}"
                                         }
                                     }
                                 }
