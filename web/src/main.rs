@@ -204,22 +204,22 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                     },
                     {
                         rsx! {
-                            if j > 1 {
+                            if j > 0 {
                                 {
+                                    let kana_key = kana_focus_signal();
                                     rsx! {
-                                        if kana_focus_signal().starts_with(f) {
-                                            {
-                                                let kana_key = kana_focus_signal();
-                                                let maybe_kana = kana_hashmap.get(&kana_key);
+                                        {
+                                            let maybe_kana = kana_hashmap.get(&kana_key);
             
-                                                match maybe_kana {
-                                                    Some(kana) =>  {
-                                                        KanaCardComponent(KanaCardComponentProps{current_type, kana_key, kana:kana.clone()})
-                                                    },
-                                                    None=> rsx! {
-                                                        div { style: "{text_style_none}", "" }
+                                            match maybe_kana {
+                                                Some(kana) => {
+                                                    if (j == 1 && kana_key.len() == 1 && ["a", "i", "u", "e", "o"].contains(&kana_key.as_str())) || j > 1 && kana_key.starts_with(f) {
+                                                        KanaCardComponent(KanaCardComponentProps { current_type, kana_key, kana: kana.clone() })
+                                                    } else {
+                                                        rsx! {}
                                                     }
-                                                }
+                                                },
+                                                None => rsx! {},
                                             }
                                         }
                                     }
