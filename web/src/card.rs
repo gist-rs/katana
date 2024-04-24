@@ -62,9 +62,13 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
         }
     ));
 
+    let mut index = use_signal(|| 0);
+
     match future.read_unchecked().as_ref() {
         Some(Ok(response)) => {
             log::info!("{response:?}");
+
+            let total = response.len();
 
             rsx! {
                 style { {include_str!("../public/card.css")} }
@@ -79,25 +83,38 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                         br {}
                         small { class: "card-left-romaji", "{kana.romaji}" }
                     }
-                    {
-                        response.iter().map(|kana_card: &KanaCard| {
+                    div { class: "card-right",
+                        {
+                            if index() > total - 1 { index.set(total - 1)};
+                            let kana_card = response[index()].clone();
                             let kana = kana_card.kana.clone();
-                    
+                        
                             rsx! {
                                 div {
-                                    class: "card-right",
+                                    class: "card-right-item",
                                     img {
                                         src: "{kana_card.src}"
                                     }
                                     div {
-                                        "{kana}"
-                                    }
-                                    div {
-                                        "{kana_card.english}"
+                                        div {
+                                            "{kana}"
+                                        }
+                                        div {
+                                            "{kana_card.english}"
+                                        }
                                     }
                                 }
                             }
-                        })
+                        },
+                        div { class: "card-right-nav",
+                            button { onclick: move |_| if index() > 0 { index -= 1 } else { index.set(total - 1) },
+                                "⇦"
+                            }
+                            span { "{index() + 1}/{total}" }
+                            button { onclick: move |_| if index() < total - 1 { index += 1 } else { index.set(0) },
+                                "⇨"
+                            }
+                        }
                     }
                 }
             }

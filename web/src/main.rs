@@ -13,7 +13,9 @@ use card::KanaCardComponent;
 use crate::card::KanaCardComponentProps;
 
 pub fn TableSwitcher() -> Element {
-    rsx! { div { style: "display: flex-grid" } }
+    rsx! {
+        div { style: "display: flex-grid" }
+    }
 }
 
 #[derive(Debug, Eq, PartialEq, EnumString, Display, Clone, Copy)]
@@ -189,7 +191,6 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                             }
                         })
                     },
-            
                     {
                         rsx! {
                             if j > 0 {
@@ -287,7 +288,9 @@ fn App() -> Element {
     }
 
     log::info!("{:#?}", config_signal);
-    rsx! { KanaSwitcher { kana_type: config_signal().kana_type, kana_hashmap_signal } }
+    rsx! {
+        KanaSwitcher { kana_type: config_signal().kana_type, kana_hashmap_signal }
+    }
 }
 
 fn main() {
