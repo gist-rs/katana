@@ -1,0 +1,23 @@
+[
+  {
+    "kanji": "木",
+    "kana": "き",
+    "english": "ki",
+    "phonemic": "ki",
+    "src": "hiragana/ki_tree.png"
+  },
+  {
+    "kanji": "お好み焼き",
+    "kana": "おこのみやき",
+    "english": "okonomiyaki",
+    "phonemic": "okonomiyaki",
+    "src": "hiragana/ki_okonomiyaki.png"
+  },
+  {
+    "kanji": "todo-お好み焼き",
+    "kana": "todo-おこのみやき",
+    "english": "todo",
+    "phonemic": "todo",
+    "src": "hiragana/ki_okonomiyaki.png"
+  }
+]

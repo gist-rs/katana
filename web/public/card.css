@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  width: 100%;
+}
+
+.card-left {
+  transition: all 0.3s;
+  display: block;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 8em;
+  background-color: #eeffee;
+}
+
+.card-left-romaji {
+  display: block;
+  font-size: medium;
+  color: #aaaaaa;
+  line-height: 2em;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+}
