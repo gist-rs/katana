@@ -78,6 +78,11 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
 
             log::info!("{filtered_response:?}");
 
+            // Not exist
+            if filtered_response.is_empty() {
+                return rsx! {  };
+            }
+
             let total = filtered_response.len();
 
             rsx! {
