@@ -7,6 +7,13 @@
     "src": "katakana/curry_rice.png"
   },
   {
+    "kana": "クマ",
+    "romaji": "kuma",
+    "kanji": "熊",
+    "meaning": "Bear",
+    "src": "katakana/bear.png"
+  },
+  {
     "kana": "ケーキ",
     "romaji": "ke-ki",
     "kanji": "英",

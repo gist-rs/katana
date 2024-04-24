@@ -80,7 +80,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
 
     let text_style = r#"
         transition: all .3s;
-        background-color: #eeeeee;
+        background-color: #dddddd;
         display: inline-block;
         white-space: nowrap;
         width: 48px;
@@ -102,10 +102,21 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         cursor: pointer;
     "#;
 
+    let text_style_none = r#"
+        transition: all .3s;
+        background-color: #eeeeee;
+        display: inline-block;
+        white-space: nowrap;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 2em;
+    "#;
+
     let text_romaji_style = r#"
         display: block;
         font-size: small;
-        color: #aaaaaa;
+        color: #999999;
         line-height: 0.5em;
     "#;
 
@@ -146,7 +157,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
         }
         div { style: "{container_style}",
             {
-                ["", "k", "s", "t", "n", "h", "m", "y", "r", "w", "N", "g" , "z", "d", "b", "p"].iter().enumerate().map(|(j,f)| rsx! {
+                ["", "", "k", "s", "t", "n", "h", "m", "y", "r", "w", "N", "g" , "z", "d", "b", "p"].iter().enumerate().map(|(j,f)| rsx! {
                     {
                         ["", "a", "i", "u", "e", "o", "ya", "yu", "yo"].iter().enumerate().map(|(i, e)| rsx! {
                             if i==0 {
@@ -156,7 +167,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                             } else {
                                 {
                                     let kana_key = format!("{f}{e}");
-                                    let maybe_kana = kana_hashmap.get(&kana_key);
+                                    let maybe_kana = if j==1 && i>5 { None } else { kana_hashmap.get(&kana_key) };
                                     let kana_style = if kana_focus_signal() != kana_key { text_style } else { text_style_focus };
             
                                     match maybe_kana {
@@ -184,7 +195,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                             }
                                         },
                                         None=> rsx!{
-                                            div { style: "{text_style}", "" }
+                                            div { style: "{text_style_none}", "" }
                                         }
                                     }
                                 }
@@ -193,8 +204,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                     },
                     {
                         rsx! {
-                            if j > 0 {
-            
+                            if j > 1 {
                                 {
                                     rsx! {
                                         if kana_focus_signal().starts_with(f) {
@@ -207,7 +217,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                                         KanaCardComponent(KanaCardComponentProps{current_type, kana_key, kana:kana.clone()})
                                                     },
                                                     None=> rsx! {
-                                                        div { style: "{text_style}", "" }
+                                                        div { style: "{text_style_none}", "" }
                                                     }
                                                 }
                                             }
