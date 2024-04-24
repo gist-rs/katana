@@ -19,5 +19,12 @@
     "kanji": "英",
     "meaning": "Cake",
     "src": "katakana/cake.png"
+  },
+  {
+    "kana": "コーヒー",
+    "romaji": "koohii",
+    "kanji": "珈琲",
+    "meaning": "Coffee",
+    "src": "katakana/coffee.png"
   }
 ]
