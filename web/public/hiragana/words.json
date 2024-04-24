@@ -40,5 +40,12 @@
     "kanji": "お客さま",
     "meaning": "Customer",
     "src": "hiragana/customer.png"
+  },
+  {
+    "kana": "けん",
+    "romaji": "ken",
+    "kanji": "剣",
+    "meaning": "Sword (or fist)",
+    "src": "hiragana/fist.png"
   }
 ]

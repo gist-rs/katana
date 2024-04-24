@@ -1,9 +1,16 @@
 [
   {
-    "kanji": "咖哩",
     "kana": "カレー",
-    "english": "curry",
-    "phonemic": "karē",
+    "romaji": "karē",
+    "kanji": "咖哩",
+    "meaning": "Curry",
     "src": "katakana/curry_rice.png"
+  },
+  {
+    "kana": "ケーキ",
+    "romaji": "ke-ki",
+    "kanji": "英",
+    "meaning": "Cake",
+    "src": "katakana/cake.png"
   }
 ]

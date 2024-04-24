@@ -54,7 +54,7 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
 
             // Not exist
             if filtered_response.is_empty() {
-                return rsx! {  };
+                return rsx! {};
             }
 
             let total = filtered_response.len();
@@ -77,7 +77,7 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                             if index() > total - 1 { index.set(total - 1)};
                             let kana_card = filtered_response[index()].clone();
                             let kana = kana_card.kana.clone();
-                        
+
                             rsx! {
                                 div { class: "card-right-item",
                                     img {
