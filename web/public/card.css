@@ -29,3 +29,9 @@
   justify-content: center;
   background-color: #eeeeee;
 }
+
+.card-right + img {
+  padding: 8px;
+  max-width: 64px;
+  max-height: 64px;
+}

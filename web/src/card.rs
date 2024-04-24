@@ -77,21 +77,16 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                             }
                         },
                         br {}
-                        small { class: "card-left-romaji",
-                            "{kana.romaji}"
-                        }
+                        small { class: "card-left-romaji", "{kana.romaji}" }
                     }
                     {
                         response.iter().map(|kana_card: &KanaCard| {
                             let kana = kana_card.kana.clone();
-
+                    
                             rsx! {
                                 div {
                                     class: "card-right",
                                     img {
-                                        style: "padding: 8px;",
-                                        max_width: "64px",
-                                        max_height: "64px",
                                         src: "{kana_card.src}"
                                     }
                                     div {
