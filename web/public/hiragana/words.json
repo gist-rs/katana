@@ -1,0 +1,23 @@
+[
+  {
+    "kanji": "刀",
+    "kana": "かたな",
+    "english": "katana",
+    "phonemic": "/kəˈtänə/",
+    "src": "hiragana/katana.png"
+  },
+  {
+    "kanji": "木",
+    "kana": "き",
+    "english": "ki",
+    "phonemic": "ki",
+    "src": "hiragana/tree.png"
+  },
+  {
+    "kanji": "お好み焼き",
+    "kana": "おこのみやき",
+    "english": "okonomiyaki",
+    "phonemic": "okonomiyaki",
+    "src": "hiragana/okonomiyaki.png"
+  }
+]
