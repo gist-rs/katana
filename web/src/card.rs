@@ -52,7 +52,14 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
 
             filtered_response.sort_by_key(|v| v.romaji.len());
 
-            log::info!("{filtered_response:?}");
+            match current_type {
+                KanaType::Hiragana => {
+                    filtered_response.sort_by_key(|v| !v.kana.starts_with(kana.hiragana.as_str()))
+                }
+                KanaType::Katakana => {
+                    filtered_response.sort_by_key(|v| !v.kana.starts_with(kana.katakana.as_str()))
+                }
+            }
 
             // Not exist
             if filtered_response.is_empty() {

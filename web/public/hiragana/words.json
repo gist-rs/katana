@@ -82,5 +82,19 @@
     "kanji": "子",
     "meaning": "Child",
     "src": "hiragana/child.png"
+  },
+  {
+    "kana": "さかな",
+    "romaji": "sakana",
+    "kanji": "魚",
+    "meaning": "Fish",
+    "src": "hiragana/fish.png"
+  },
+  {
+    "kana": "しずか",
+    "romaji": "shizuka",
+    "kanji": "静か",
+    "meaning": "Quiet",
+    "src": "hiragana/quiet.png"
   }
 ]
