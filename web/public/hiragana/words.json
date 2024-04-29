@@ -96,5 +96,47 @@
     "kanji": "静か",
     "meaning": "Quiet",
     "src": "hiragana/quiet.png"
+  },
+  {
+    "kana": "すき",
+    "romaji": "suki",
+    "kanji": "好き",
+    "meaning": "Liking",
+    "src": "hiragana/liking.png"
+  },
+  {
+    "kana": "せんせい",
+    "romaji": "sensei",
+    "kanji": "先生",
+    "meaning": "Teacher",
+    "src": "hiragana/teacher.png"
+  },
+  {
+    "kana": "そら",
+    "romaji": "sora",
+    "kanji": "空",
+    "meaning": "Sky",
+    "src": "hiragana/sky.png"
+  },
+  {
+    "kana": "しゃしん",
+    "romaji": "shashin",
+    "kanji": "写真",
+    "meaning": "Photo",
+    "src": "hiragana/photo.png"
+  },
+  {
+    "kana": "しゅくだい",
+    "romaji": "shukudai",
+    "kanji": "宿題",
+    "meaning": "Homework",
+    "src": "hiragana/homework.png"
+  },
+  {
+    "kana": "しょくぶつ",
+    "romaji": "shokubutsu",
+    "kanji": "植物",
+    "meaning": "Plant",
+    "src": "hiragana/plant.png"
   }
 ]
