@@ -3,15 +3,36 @@
     "kana": "あめ",
     "romaji": "ame",
     "kanji": "雨",
-    "meaning": "rain",
+    "meaning": "Rain",
     "src": "hiragana/rain.png"
   },
   {
     "kana": "いぬ",
     "romaji": "inu",
     "kanji": "犬",
-    "meaning": "dog",
+    "meaning": "Dog",
     "src": "hiragana/dog.png"
+  },
+  {
+    "kana": "うみ",
+    "romaji": "umi",
+    "kanji": "海",
+    "meaning": "Sea",
+    "src": "hiragana/sea.png"
+  },
+  {
+    "kana": "えき",
+    "romaji": "eki",
+    "kanji": "駅",
+    "meaning": "Station",
+    "src": "hiragana/station.png"
+  },
+  {
+    "kana": "おいしい",
+    "romaji": "oishii",
+    "kanji": "美味しい",
+    "meaning": "Delicious",
+    "src": "hiragana/delicious.png"
   },
   {
     "kana": "かたな",
