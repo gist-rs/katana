@@ -40,5 +40,12 @@
     "kanji": "剣",
     "meaning": "Sword (or fist)",
     "src": "hiragana/fist.png"
+  },
+  {
+    "kana": "こども",
+    "romaji": "kodomo",
+    "kanji": "子",
+    "meaning": "Child",
+    "src": "hiragana/child.png"
   }
 ]

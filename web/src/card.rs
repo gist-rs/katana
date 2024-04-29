@@ -42,7 +42,7 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
         Some(Ok(response)) => {
             log::info!("{response:?}");
 
-            let filtered_response = &response
+            let mut filtered_response = response
                 .iter()
                 .filter(|v| match current_type {
                     KanaType::Hiragana => v.kana.contains(&kana.hiragana),
@@ -50,11 +50,13 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                 })
                 .collect::<Vec<_>>();
 
+            filtered_response.sort_by_key(|v| v.romaji.len());
+
             log::info!("{filtered_response:?}");
 
             // Not exist
             if filtered_response.is_empty() {
-                return rsx! {};
+                return rsx! {  };
             }
 
             let total = filtered_response.len();
@@ -77,7 +79,7 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                             if index() > total - 1 { index.set(total - 1)};
                             let kana_card = filtered_response[index()].clone();
                             let kana = kana_card.kana.clone();
-
+                        
                             rsx! {
                                 div { class: "card-right-item",
                                     img {
