@@ -1,5 +1,19 @@
 [
   {
+    "kana": "あめ",
+    "romaji": "ame",
+    "kanji": "雨",
+    "meaning": "rain",
+    "src": "hiragana/rain.png"
+  },
+  {
+    "kana": "いぬ",
+    "romaji": "inu",
+    "kanji": "犬",
+    "meaning": "dog",
+    "src": "hiragana/dog.png"
+  },
+  {
     "kana": "かたな",
     "romaji": "katana",
     "kanji": "刀",
