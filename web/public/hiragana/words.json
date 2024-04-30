@@ -194,5 +194,40 @@
     "kanji": "",
     "meaning": "A little",
     "src": "hiragana/little.png"
+  },
+  {
+    "kana": "ない",
+    "romaji": "nai",
+    "kanji": "無い",
+    "meaning": "Not have",
+    "src": "hiragana/not_have.png"
+  },
+  {
+    "kana": "なに",
+    "romaji": "nani",
+    "kanji": "何",
+    "meaning": "What?",
+    "src": "hiragana/what.png"
+  },
+  {
+    "kana": "ぬし",
+    "romaji": "nus(hi)",
+    "kanji": "主人",
+    "meaning": "Owner",
+    "src": "hiragana/owner.png"
+  },
+  {
+    "kana": "ねこ",
+    "romaji": "neko",
+    "kanji": "猫",
+    "meaning": "Cat",
+    "src": "hiragana/cat.png"
+  },
+  {
+    "kana": "のむ",
+    "romaji": "nomu",
+    "kanji": "飲む",
+    "meaning": "To drink",
+    "src": "hiragana/to_drink.png"
   }
 ]
