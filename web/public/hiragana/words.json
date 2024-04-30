@@ -229,5 +229,33 @@
     "kanji": "飲む",
     "meaning": "To drink",
     "src": "hiragana/to_drink.png"
+  },
+  {
+    "kana": "にゃん",
+    "romaji": "nyan",
+    "kanji": "",
+    "meaning": "Cat meow sound",
+    "src": "hiragana/cat.png"
+  },
+  {
+    "kana": "にゅうせいひん",
+    "romaji": "nyuuseehin",
+    "kanji": "",
+    "meaning": "A dairy product",
+    "src": "hiragana/dairy.png"
+  },
+  {
+    "kana": "にょい",
+    "romaji": "nioi",
+    "kanji": "匂い",
+    "meaning": "smell",
+    "src": "hiragana/smell.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
   }
 ]
