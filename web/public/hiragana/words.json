@@ -252,6 +252,559 @@
     "src": "hiragana/smell.png"
   },
   {
+    "kana": "は",
+    "romaji": "ha",
+    "kanji": "歯",
+    "meaning": "tooth",
+    "src": "hiragana/tooth.png"
+  },
+  {
+    "kana": "はは",
+    "romaji": "haha",
+    "kanji": "母",
+    "meaning": "Mom",
+    "src": "hiragana/mom.png"
+  },
+  {
+    "kana": "ひ",
+    "romaji": "hi",
+    "kanji": "火 ",
+    "meaning": "Fire",
+    "src": "hiragana/fire.png"
+  },
+  {
+    "kana": "ひと",
+    "romaji": "hito",
+    "kanji": "人",
+    "meaning": "Person",
+    "src": "hiragana/person.png"
+  },
+  {
+    "kana": "ふく",
+    "romaji": "fuku",
+    "kanji": "服",
+    "meaning": "Clothes",
+    "src": "hiragana/clothes.png"
+  },
+  {
+    "kana": "へる",
+    "romaji": "heru",
+    "kanji": "減る",
+    "meaning": "decrease",
+    "src": "hiragana/decrease.png"
+  },
+  {
+    "kana": "ほほ",
+    "romaji": "hoho",
+    "kanji": "頬",
+    "meaning": "cheek",
+    "src": "hiragana/cheek.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
+    "kana": "",
+    "romaji": "",
+    "kanji": "",
+    "meaning": "",
+    "src": "hiragana/.png"
+  },
+  {
     "kana": "",
     "romaji": "",
     "kanji": "",

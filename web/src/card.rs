@@ -50,7 +50,7 @@ pub fn KanaCardComponent(props: KanaCardComponentProps) -> Element {
                 })
                 .collect::<Vec<_>>();
 
-            filtered_response.sort_by_key(|v| v.romaji.len());
+            filtered_response.sort_by_key(|v| v.kana.len());
 
             match current_type {
                 KanaType::Hiragana => {
