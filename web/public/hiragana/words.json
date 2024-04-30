@@ -138,5 +138,26 @@
     "kanji": "植物",
     "meaning": "Plant",
     "src": "hiragana/plant.png"
+  },
+  {
+    "kana": "たべもの",
+    "romaji": "tabemono",
+    "kanji": "食べ物",
+    "meaning": "Food",
+    "src": "hiragana/food.png"
+  },
+  {
+    "kana": "ちち",
+    "romaji": "chichi",
+    "kanji": "父",
+    "meaning": "Father",
+    "src": "hiragana/father.png"
+  },
+  {
+    "kana": "つなみ",
+    "romaji": "tsunami",
+    "kanji": "津波",
+    "meaning": "harbor wave",
+    "src": "hiragana/wave.png"
   }
 ]
