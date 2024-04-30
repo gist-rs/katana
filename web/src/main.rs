@@ -214,7 +214,7 @@ fn KanaSwitcher(props: KanaSwitcherProps) -> Element {
                                             match maybe_kana {
                                                 Some(kana) => {
                                                     if (j == 1 && kana_key.len() == 1 && ["a", "i", "u", "e", "o"].contains(&kana_key.as_str())) || j > 1 && kana_key.starts_with(f) {
-                                                        KanaCardComponent(KanaCardComponentProps { current_type, kana_key, kana: kana.clone() })
+                                                        KanaCardComponent(KanaCardComponentProps { current_type: *current_type, kana_key, kana: kana.clone() })
                                                     } else {
                                                         rsx! {}
                                                     }
