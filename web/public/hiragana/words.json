@@ -157,7 +157,42 @@
     "kana": "つなみ",
     "romaji": "tsunami",
     "kanji": "津波",
-    "meaning": "harbor wave",
+    "meaning": "Harbor wave",
     "src": "hiragana/wave.png"
+  },
+  {
+    "kana": "て",
+    "romaji": "hand",
+    "kanji": "手",
+    "meaning": "Hand",
+    "src": "hiragana/hand.png"
+  },
+  {
+    "kana": "ともだち",
+    "romaji": "tomodachi",
+    "kanji": "友達",
+    "meaning": "Friend",
+    "src": "hiragana/friend.png"
+  },
+  {
+    "kana": "ちゃい",
+    "romaji": "cha",
+    "kanji": "茶",
+    "meaning": "Tea",
+    "src": "hiragana/tea.png"
+  },
+  {
+    "kana": "ちゅうしょく",
+    "romaji": "chūshoku",
+    "kanji": "昼食",
+    "meaning": "Lunch",
+    "src": "hiragana/lunch.png"
+  },
+  {
+    "kana": "ちょっと",
+    "romaji": "chotto",
+    "kanji": "",
+    "meaning": "A little",
+    "src": "hiragana/little.png"
   }
 ]
