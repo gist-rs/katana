@@ -301,39 +301,39 @@
     "src": "hiragana/cheek.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "まつ",
+    "romaji": "matsu",
+    "kanji": "待つ",
+    "meaning": "Wait",
+    "src": "hiragana/wait.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "みみ",
+    "romaji": "mimi",
+    "kanji": "耳",
+    "meaning": "ear",
+    "src": "hiragana/ear.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "むし",
+    "romaji": "mushi",
+    "kanji": "虫",
+    "meaning": "Bug, insect",
+    "src": "hiragana/bug.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "め",
+    "romaji": "me",
+    "kanji": "目",
+    "meaning": "Eye",
+    "src": "hiragana/eye.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "もも",
+    "romaji": "momo",
+    "kanji": "桃",
+    "meaning": "Peach",
+    "src": "hiragana/peach.png"
   },
   {
     "kana": "",
