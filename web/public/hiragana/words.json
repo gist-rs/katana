@@ -378,11 +378,11 @@
     "src": "hiragana/bring_down.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "わすれる",
+    "romaji": "wasureru",
+    "kanji": "忘れる",
+    "meaning": "forget",
+    "src": "hiragana/forget.png"
   },
   {
     "kana": "",
