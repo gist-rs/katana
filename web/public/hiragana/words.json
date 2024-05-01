@@ -49,6 +49,13 @@
     "src": "hiragana/tree.png"
   },
   {
+    "kana": "きれい",
+    "romaji": "kirei",
+    "kanji": "綺麗",
+    "meaning": "Beautiful, clean",
+    "src": "hiragana/beautiful.png"
+  },
+  {
     "kana": "おこのみやき",
     "romaji": "okonomiyaki",
     "kanji": "お好み焼き",
@@ -336,46 +343,39 @@
     "src": "hiragana/peach.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "やさい",
+    "romaji": "yasai",
+    "kanji": "野菜",
+    "meaning": "vegetables",
+    "src": "hiragana/vegetables.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "ゆっくり",
+    "romaji": "yukkuri",
+    "kanji": "ゆっくり",
+    "meaning": "Slowly",
+    "src": "hiragana/slowly.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "よむ",
+    "romaji": "yomu",
+    "kanji": "読む",
+    "meaning": "Read",
+    "src": "hiragana/read.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "きらう",
+    "romaji": "kirau",
+    "kanji": "嫌う",
+    "meaning": "dislike",
+    "src": "hiragana/dislike.png"
   },
   {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
-  },
-  {
-    "kana": "",
-    "romaji": "",
-    "kanji": "",
-    "meaning": "",
-    "src": "hiragana/.png"
+    "kana": "おろす",
+    "romaji": "orosu",
+    "kanji": "降ろす",
+    "meaning": "To lower, bring down",
+    "src": "hiragana/bring_down.png"
   },
   {
     "kana": "",
